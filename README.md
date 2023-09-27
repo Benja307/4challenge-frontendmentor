@@ -31,12 +31,14 @@ Users should be able to:
 
 ![](./images/Screenshot_2023-09-27%20Frontend%20Mentor%20Interactive%20rating%20component.png)
 ![](./images/Screenshot_2023-09-27%20Frontend%20Mentor%20Interactive%20rating%20component(1).png)
+![](./images/ratingmobile.jpeg)
+![](./images/tymobile.jpeg)
 
 
 
 ### Links
 
-- Live Site URL: 
+- Live Site URL: https://Benja307.github.io/4challenge-frontendmentor/
 
 ## My process
 
@@ -63,6 +65,7 @@ Con la función addEventListener() lo que hago es agregar una escucha a un deter
 ### Continued development
 
 Me seguiré enfocando en prácticar los conceptos básicos de JavaScript para añadir más interactividad a mis proyectos.
+El proyecto presenta un bug, si seleccionamos una calificación del 1 al 5 y luego clickeamos en los espacios entre los botones, al darle a submit aparece un resultado defectuoso en la tarjeta de agradecimiento.
 
 ### Useful resources
 
