@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body main {
+  font-family: 'Overpass', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #121417;
+  height: 100vh;
+}
+
+body main .rating-state {
+  display: -ms-grid;
+  display: grid;
+  background-color: #252d37;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 16px;
+  border-radius: 20px;
+  width: 30%;
+  -ms-grid-rows: 1.5fr (1.2fr)[3] 1.8fr;
+      grid-template-rows: 1.5fr repeat(3, 1.2fr) 1.8fr;
+}
+
+body main .rating-state span {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+body main .rating-state span img {
+  background-color: #363c45;
+  margin-left: 30px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+body main .rating-state h2 {
+  font-weight: 700;
+  margin-left: 30px;
+  color: white;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+body main .rating-state p {
+  font-weight: 400;
+  width: 80%;
+  margin-left: 30px;
+  color: #959eac;
+  font-size: 15px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+body main .rating-state .numbers {
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body main .rating-state .numbers button {
+  font-size: 15px;
+  color: #959eac;
+  background-color: #363c45;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 0;
+}
+
+body main .rating-state .numbers button:hover {
+  background-color: #fb7413;
+  cursor: pointer;
+  color: white;
+}
+
+body main .rating-state .numbers button:focus {
+  background-color: #959eac;
+  color: white;
+}
+
+body main .rating-state .submit-btn {
+  width: 85%;
+  height: 50%;
+  text-transform: uppercase;
+  font-size: 15px;
+  place-self: center;
+  background-color: #fb7413;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  border-radius: 50px;
+}
+
+body main .rating-state .submit-btn:hover {
+  background-color: white;
+  color: #fb7413;
+  cursor: pointer;
+}
+
+body main .thankyou-state {
+  background-color: #252d37;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 16px;
+  border-radius: 20px;
+  width: 30%;
+  display: none;
+  -ms-grid-rows: 6fr (1.2fr)[2] 4fr;
+      grid-template-rows: 6fr repeat(2, 1.2fr) 4fr;
+}
+
+body main .thankyou-state svg {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+body main .thankyou-state .text-rating {
+  place-self: center;
+  color: #fb7413;
+  background-color: #363c45;
+  padding: 5px 20px;
+  border-radius: 50px;
+}
+
+body main .thankyou-state h2 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  color: white;
+  font-weight: 700;
+}
+
+body main .thankyou-state .content {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  text-align: center;
+  color: #959eac;
+  font-size: 15px;
+  width: 85%;
+}
+
+body footer {
+  background-color: #121417;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body footer a {
+  color: #fb7413;
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  body main .rating-state {
+    width: 50%;
+  }
+  body main .thankyou-state {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  body main .rating-state {
+    width: 70%;
+  }
+  body main .thankyou-state {
+    width: 70%;
+  }
+}
+
+@media (max-width: 400px) {
+  body main .rating-state {
+    width: 90%;
+    -ms-grid-rows: (1.5fr)[5];
+        grid-template-rows: repeat(5, 1.5fr);
+  }
+  body main .rating-state span img {
+    margin-left: 20px;
+  }
+  body main .rating-state h2 {
+    margin-left: 20px;
+  }
+  body main .rating-state p {
+    margin-left: 20px;
+    width: 90%;
+  }
+  body main .rating-state .submit-btn {
+    height: 60%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  body main .thankyou-state {
+    width: 90%;
+  }
+  body main .thankyou-state .content {
+    width: 90%;
+  }
+  body footer {
+    font-size: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

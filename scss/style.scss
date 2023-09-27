@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+$primary: hsl(25, 97%, 53%);
+$bg-body: hsl(216, 12%, 8%);
+$bg-cards: hsl(213, 19%, 18%); 
+$grey-star: hsl(216, 12%, 24%);
+$title-color: hsl(0, 0%, 100%); 
+$paragraph-color: hsl(217, 12%, 63%);
+
+@mixin card-style{
+    background-color: $bg-cards;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    border-radius: 20px;
+    width: 30%;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    main{
+        font-family: 'Overpass', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $bg-body;
+        height: 100vh;
+        .rating-state{
+            display: grid;
+            @include card-style;
+            grid-template-rows: 1.5fr repeat(3,1.2fr) 1.8fr;
+            span{
+                align-self: flex-end;
+                img{
+                    background-color: $grey-star;
+                    margin-left: 30px;
+                    padding: 10px;
+                    border-radius: 50%;
+                }
+            }
+            h2{
+                font-weight: 700;
+                margin-left: 30px;
+                color: $title-color;
+                align-self: flex-end;
+            }
+            p{
+                font-weight: 400;
+                width: 80%;
+                margin-left: 30px;
+                color: $paragraph-color;
+                font-size: 15px;
+                align-self: flex-start;
+            }
+            .numbers{
+                align-self: center;
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                button{
+                    font-size: 15px;
+                    color: $paragraph-color;
+                    background-color: $grey-star;
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    border: 0;
+                    &:hover{
+                        background-color: $primary;
+                        cursor: pointer;
+                        color: $title-color;
+                    }
+                    &:focus{
+                        background-color: $paragraph-color;
+                        color: $title-color;
+                    }
+                }
+            }
+            .submit-btn{
+                width: 85%;
+                height: 50%;
+                text-transform: uppercase;
+                font-size: 15px;
+                place-self: center;
+                background-color: $primary;
+                color: $title-color;
+                font-weight: bold;
+                border: 0;
+                border-radius: 50px;
+                &:hover{
+                    background-color: $title-color;
+                    color: $primary;
+                    cursor: pointer;
+                }
+            }
+        }
+        .thankyou-state{
+            @include card-style;
+            display: none;
+            grid-template-rows: 6fr repeat(2,1.2fr) 4fr;
+            svg{
+                justify-self: center;
+                align-self: flex-end;
+            }
+            .text-rating{
+                place-self: center;
+                color: $primary;
+                background-color: $grey-star;
+                padding: 5px 20px;
+                border-radius: 50px;
+            }
+            h2{
+                align-self: flex-end;
+                justify-self: center;
+                color: $title-color;
+                font-weight: 700;
+            }
+            .content{
+                justify-self: center;
+                align-self: flex-start;
+                text-align: center;
+                color: $paragraph-color;
+                font-size: 15px;
+                width: 85%;
+            }
+        }
+    }
+
+    footer{
+        background-color: $bg-body;
+        color: $title-color;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        a{
+            color: $primary;
+            text-decoration: none;
+        }
+    }
+}
+
+@media(max-width:800px){
+    body{
+        main{
+            .rating-state{
+                width: 50%;
+            }
+            .thankyou-state{
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media(max-width:500px){
+    body{
+        main{
+            .rating-state{
+                width: 70%;
+            }
+            .thankyou-state{
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media(max-width:400px){
+    body{
+        main{
+            .rating-state{
+                width: 90%;
+                grid-template-rows:repeat(5,1.5fr);
+                span{
+                    img{
+                        margin-left: 20px;
+                    }
+                }
+                h2{
+                    margin-left: 20px;
+                }
+                p{
+                    margin-left: 20px;
+                    width: 90%;
+                }
+                .submit-btn{
+                    height: 60%;
+                    align-self: flex-start;
+                }
+            }
+            .thankyou-state{
+                width: 90%;
+                .content{
+                    width: 90%;
+                }
+            }
+        }
+        footer{
+            font-size: 15px;
+        }
+    }
+}
