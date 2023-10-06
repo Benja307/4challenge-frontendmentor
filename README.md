@@ -72,7 +72,7 @@ El proyecto presenta un bug, si seleccionamos una calificación del 1 al 5 y lue
 
 ## Author
 
-- LinkedIn - https://www.linkedin.com/in/benjamin-corujo-14660824a
+- LinkedIn - https://www.linkedin.com/in/benjamin-corujo-alanis
 - Frontend Mentor - https://www.frontendmentor.io/profile/Benja307
 - Instagram - @corujobenja_30
 
